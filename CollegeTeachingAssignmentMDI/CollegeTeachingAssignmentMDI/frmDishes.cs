@@ -246,7 +246,7 @@ namespace CollegeTeachingAssignmentMDI
 
         private int GetFirstInstructorId()
         {
-            int id = Convert.ToInt32(DataAccess.GetValue("SELECT TOP (1) DishID FROM CookedDish ORDER BY DishName"));
+            int id = Convert.ToInt32(DataAccess.GetValue("SELECT TOP (1) DishID FROM CookedDish ORDER BY DishID"));
             return id;
         }
 
@@ -282,7 +282,7 @@ namespace CollegeTeachingAssignmentMDI
               (SELECT COUNT(1) FROM CookedDish) AS DishesCount,
               DishID,
               (
-              SELECT TOP(1) DishID as FirstCourseId FROM CookedDish ORDER BY DishName
+              SELECT TOP(1) DishID as FirstCourseId FROM CookedDish ORDER BY DishID
               ) as FirstCourseId,
               q.PreviousCourseId,
               q.NextCourseId,
@@ -293,13 +293,13 @@ namespace CollegeTeachingAssignmentMDI
               FROM
               (
               SELECT DishID, DishName,
-              LEAD(DishID) OVER(ORDER BY DishName) AS NextCourseId,
-              LAG(DishID) OVER(ORDER BY DishName) AS PreviousCourseId,
-              ROW_NUMBER() OVER(ORDER BY DishName) AS 'RowNumber'
+              LEAD(DishID) OVER(ORDER BY DishID) AS NextCourseId,
+              LAG(DishID) OVER(ORDER BY DishID) AS PreviousCourseId,
+              ROW_NUMBER() OVER(ORDER BY DishID) AS 'RowNumber'
               FROM CookedDish
               ) AS q
               WHERE q.DishID = {id}
-              ORDER BY q.DishName";
+              ORDER BY q.DishID";
             DataTable dt = DataAccess.GetData(sqlNav);
             return dt.Rows[0];
         }

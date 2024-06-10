@@ -36,6 +36,12 @@ namespace CollegeTeachingAssignmentMDI
                 case "Inventory":
                     childForm = new frmInventory();
                     break;
+                case "BrowseDish":
+                    childForm = new frmBrowseDish();
+                    break;
+                case "BrowseInventory":
+                    childForm = new frmBrowseInventory();
+                    break;
             }
 
             if (childForm != null)

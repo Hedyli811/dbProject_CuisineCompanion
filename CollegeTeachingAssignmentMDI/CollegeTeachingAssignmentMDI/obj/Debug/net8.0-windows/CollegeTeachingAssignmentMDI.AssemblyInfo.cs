@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NBCC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.9")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fa3fc8707445dc9fb906b747c22f6821f9b7b8c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7116bc1eb0ee8d5ce31d5ded9c6f9443087fc366")]
 [assembly: System.Reflection.AssemblyProductAttribute("College Teaching Assignments")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CollegeTeachingAssignmentMDI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.9")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\db-prog-mdi-demo-starter-Hedyli811\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI.csproj": {}
+    "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI.csproj": {}
   },
   "projects": {
-    "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\db-prog-mdi-demo-starter-Hedyli811\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI.csproj": {
+    "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\db-prog-mdi-demo-starter-Hedyli811\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI.csproj",
+        "projectUniqueName": "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI.csproj",
         "projectName": "CollegeTeachingAssignmentMDI",
-        "projectPath": "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\db-prog-mdi-demo-starter-Hedyli811\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI.csproj",
+        "projectPath": "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI.csproj",
         "packagesPath": "C:\\Users\\hedy\\.nuget\\packages\\",
-        "outputPath": "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\db-prog-mdi-demo-starter-Hedyli811\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\obj\\",
+        "outputPath": "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hedy\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -63,8 +63,10 @@
             tsbCourses = new ToolStripButton();
             statusStrip = new StatusStrip();
             toolStripStatusLabel = new ToolStripStatusLabel();
-            toolTip = new ToolTip(components);
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            toolTip = new ToolTip(components);
+            browseDishToolStripMenuItem = new ToolStripMenuItem();
+            browseInventoryToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             toolStrip.SuspendLayout();
             statusStrip.SuspendLayout();
@@ -114,7 +116,7 @@
             // 
             // 维护ToolStripMenuItem
             // 
-            维护ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { instructorToolStripMenuItem, courseToolStripMenuItem });
+            维护ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { instructorToolStripMenuItem, courseToolStripMenuItem, browseDishToolStripMenuItem, browseInventoryToolStripMenuItem });
             维护ToolStripMenuItem.Name = "维护ToolStripMenuItem";
             维护ToolStripMenuItem.Size = new Size(53, 24);
             维护ToolStripMenuItem.Text = "维护";
@@ -122,7 +124,7 @@
             // instructorToolStripMenuItem
             // 
             instructorToolStripMenuItem.Name = "instructorToolStripMenuItem";
-            instructorToolStripMenuItem.Size = new Size(161, 26);
+            instructorToolStripMenuItem.Size = new Size(224, 26);
             instructorToolStripMenuItem.Tag = "Dishes";
             instructorToolStripMenuItem.Text = "Dishes";
             instructorToolStripMenuItem.Click += ShowNewForm;
@@ -130,7 +132,7 @@
             // courseToolStripMenuItem
             // 
             courseToolStripMenuItem.Name = "courseToolStripMenuItem";
-            courseToolStripMenuItem.Size = new Size(161, 26);
+            courseToolStripMenuItem.Size = new Size(224, 26);
             courseToolStripMenuItem.Tag = "Inventory";
             courseToolStripMenuItem.Text = "Inventory";
             courseToolStripMenuItem.Click += ShowNewForm;
@@ -288,7 +290,7 @@
             // tsbInstructors
             // 
             tsbInstructors.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            tsbInstructors.Image = Properties.Resources._2000px_Checklist_svg;
+            tsbInstructors.Image = CuisineCompanionMDI.Properties.Resources._2000px_Checklist_svg;
             tsbInstructors.ImageTransparentColor = Color.Magenta;
             tsbInstructors.Name = "tsbInstructors";
             tsbInstructors.Size = new Size(29, 24);
@@ -299,7 +301,7 @@
             // tsbCourses
             // 
             tsbCourses.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            tsbCourses.Image = Properties.Resources.微信截图_20240608205102;
+            tsbCourses.Image = CuisineCompanionMDI.Properties.Resources.微信截图_20240608205102;
             tsbCourses.ImageTransparentColor = Color.Magenta;
             tsbCourses.Name = "tsbCourses";
             tsbCourses.Size = new Size(29, 24);
@@ -329,6 +331,20 @@
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             toolStripStatusLabel1.Size = new Size(167, 20);
             toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // browseDishToolStripMenuItem
+            // 
+            browseDishToolStripMenuItem.Name = "browseDishToolStripMenuItem";
+            browseDishToolStripMenuItem.Size = new Size(224, 26);
+            browseDishToolStripMenuItem.Tag = "BrowseDish";
+            browseDishToolStripMenuItem.Text = "BrowseDish";
+            // 
+            // browseInventoryToolStripMenuItem
+            // 
+            browseInventoryToolStripMenuItem.Name = "browseInventoryToolStripMenuItem";
+            browseInventoryToolStripMenuItem.Size = new Size(224, 26);
+            browseInventoryToolStripMenuItem.Tag = "BrowseInventory";
+            browseInventoryToolStripMenuItem.Text = "BrowseInventory";
             // 
             // frmMDIParent
             // 
@@ -391,6 +407,8 @@
         private ToolStripButton tsbInstructors;
         private ToolStripButton tsbCourses;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripMenuItem browseDishToolStripMenuItem;
+        private ToolStripMenuItem browseInventoryToolStripMenuItem;
     }
 }
 

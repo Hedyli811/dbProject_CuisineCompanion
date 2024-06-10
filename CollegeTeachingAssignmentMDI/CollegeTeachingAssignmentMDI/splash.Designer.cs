@@ -40,7 +40,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.微信截图_20240608212119;
+            pictureBox1.Image = CuisineCompanionMDI.Properties.Resources.微信截图_20240608212119;
             pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(550, 381);

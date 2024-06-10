@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,22 @@ namespace CollegeTeachingAssignmentMDI
             {
                 perentMdi.DisplayStatusMessage(message, color);
             }
+        }
+
+        public static void AddEmptyRow(this DataTable dt, string emptyColumn, string nullColumn)
+        {
+            DataRow dr = dt.NewRow();
+            //dr[emptyColumn] = string.Empty;
+            dr[emptyColumn] = "-- Select an Item --";
+            dr[nullColumn] = DBNull.Value;
+            dt.Rows.InsertAt(dr, 0);
+        }
+
+        public static void Bind(this ComboBox cmb, string displayMember, string valueMember, object? dataSource)
+        {
+            cmb.DataSource = dataSource;
+            cmb.ValueMember = valueMember;
+            cmb.DisplayMember = displayMember;
         }
 
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2RUYiPeGAqqZRY/qFIlEGPrcYFRWQs+TLylYSGnB2EKANJYnM8XMPhOlnco/Rern3GVEi6qKlGs9kuR5FnQM7A==",
+  "dgSpecHash": "JFdZC9qtNGW3WUPHEIfkWXnY5SXqrSJkvRlhj/6lhKSx/oE8/36LpstTIdvze5SwjPLQZb6SI7HM2pzBQ5bX8g==",
   "success": true,
-  "projectFilePath": "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\db-prog-mdi-demo-starter-Hedyli811\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI.csproj",
+  "projectFilePath": "D:\\SRC\\24SPRING\\dbProgramming\\Assigment\\dbProject_CuisineCompanion\\CollegeTeachingAssignmentMDI\\CollegeTeachingAssignmentMDI\\CuisineCompanionMDI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hedy\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\hedy\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
