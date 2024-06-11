@@ -1,5 +1,13 @@
+-- 如果数据库存在，则首先删除数据库
+IF EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = 'CuisineCompanion')
+BEGIN
+    DROP DATABASE CuisineCompanion;
+END
+GO
 
---DROP DATABASE CuisineCompanion;
+-- 创建新的数据库 CuisineCompanion
+CREATE DATABASE CuisineCompanion;
+GO
 
  
  --DROP TABLE  Inventory_CookedDish
@@ -44,8 +52,8 @@ CREATE TABLE Inventory_CookedDish(
 	DishID INT NOT NULL , 
 	QuantityRequired INT NOT NULL,
 	 
-	FOREIGN KEY (InventoryID) REFERENCES Inventory(InventoryID),
-	FOREIGN KEY (DishID) REFERENCES CookedDish(DishID)
+	FOREIGN KEY (InventoryID) REFERENCES Inventory(InventoryID) ON DELETE CASCADE,
+	FOREIGN KEY (DishID) REFERENCES CookedDish(DishID) ON DELETE CASCADE
 );
 
 INSERT INTO Inventory_CookedDish(InventoryID,DishID,QuantityRequired)
@@ -62,3 +70,4 @@ SELECT * FROM Inventory
 SELECT * FROM CookedDish
 SELECT * FROM Inventory_CookedDish
  
+

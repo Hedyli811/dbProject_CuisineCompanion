@@ -1,0 +1,12 @@
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\CuisineCompanionMDI.exe
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\CuisineCompanionMDI.dll
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\CuisineCompanionMDI.deps.json
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\CuisineCompanionMDI.runtimeconfig.json
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\CuisineCompanionMDI.dll.config
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\CuisineCompanionMDI.pdb
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\System.Data.SqlClient.dll
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\runtimes\win-arm64\native\sni.dll
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\runtimes\win-x64\native\sni.dll
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\runtimes\win-x86\native\sni.dll
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\bin\Release\net8.0-windows\app.publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
