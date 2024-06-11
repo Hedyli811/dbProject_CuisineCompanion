@@ -31,3 +31,4 @@ D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachi
 D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\obj\Debug\net8.0-windows\CuisineCompanionMDI.pdb
 D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\obj\Debug\net8.0-windows\CuisineCompanionMDI.genruntimeconfig.cache
 D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\obj\Debug\net8.0-windows\ref\CuisineCompanionMDI.dll
+D:\SRC\24SPRING\dbProgramming\Assigment\dbProject_CuisineCompanion\CollegeTeachingAssignmentMDI\CollegeTeachingAssignmentMDI\obj\Debug\net8.0-windows\CuisineCompanionMDI.frmManytoMany.resources

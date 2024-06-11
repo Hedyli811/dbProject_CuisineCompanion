@@ -49,12 +49,16 @@
             txtFoodName = new TextBox();
             label2 = new Label();
             errorProvider = new ErrorProvider(components);
+            qty = new Label();
+            txtQty = new TextBox();
             grpCourses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
             // 
             // grpCourses
             // 
+            grpCourses.Controls.Add(txtQty);
+            grpCourses.Controls.Add(qty);
             grpCourses.Controls.Add(dtpPurchase);
             grpCourses.Controls.Add(txtInventoryId);
             grpCourses.Controls.Add(label1);
@@ -255,6 +259,22 @@
             // 
             errorProvider.ContainerControl = this;
             // 
+            // qty
+            // 
+            qty.AutoSize = true;
+            qty.Location = new Point(354, 231);
+            qty.Name = "qty";
+            qty.Size = new Size(79, 20);
+            qty.TabIndex = 30;
+            qty.Text = "Quantity";
+            // 
+            // txtQty
+            // 
+            txtQty.Location = new Point(354, 265);
+            txtQty.Name = "txtQty";
+            txtQty.Size = new Size(125, 26);
+            txtQty.TabIndex = 31;
+            // 
             // frmInventory
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
@@ -292,6 +312,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private DateTimePicker dtpPurchase;
+        private TextBox txtQty;
+        private Label qty;
     }
 
 

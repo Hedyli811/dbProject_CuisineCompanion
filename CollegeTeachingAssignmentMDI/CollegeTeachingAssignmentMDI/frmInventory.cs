@@ -52,7 +52,7 @@ namespace CollegeTeachingAssignmentMDI
                 return;
             }
             LoadCurrentPosition();
-            DisplayCurrentCourse();
+            DisplayCurrentInventory();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -62,12 +62,12 @@ namespace CollegeTeachingAssignmentMDI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete this Course?", "Are you sure",
+            if (MessageBox.Show("Are you sure you want to delete this inventory?", "Are you sure",
             MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                DeleteCourse();
+                DeleteInventory();
             }
-            LoadFirstCourse();
+            LoadFirstInventory();
 
 
         }
@@ -91,12 +91,12 @@ namespace CollegeTeachingAssignmentMDI
                     {
                         if (txtInventoryId.Text == string.Empty)
                         {
-                            CreateCourse();
-                            LoadFirstCourse();
+                            CreateInventory();
+                            LoadFirstInventory();
                         }
                         else
                         {
-                            UpdateCourse();
+                            UpdateInventory();
                         }
 
                         SetState(FormState.View);
@@ -116,7 +116,7 @@ namespace CollegeTeachingAssignmentMDI
         private void btnCancel_Click(object sender, EventArgs e)
         {
             SetState(FormState.View);
-            DisplayCurrentCourse();
+            DisplayCurrentInventory();
 
         }
 
@@ -125,7 +125,7 @@ namespace CollegeTeachingAssignmentMDI
 
         private void frmCourses_Load(object sender, EventArgs e)
         {
-            LoadFirstCourse();
+            LoadFirstInventory();
             SetState(FormState.View);
         }
 
@@ -198,11 +198,11 @@ namespace CollegeTeachingAssignmentMDI
         #region load data
 
 
-        private void LoadFirstCourse()
+        private void LoadFirstInventory()
         {
-            currentId = GetFirstCourseId();
+            currentId = GetFirstInventory();
             LoadCurrentPosition();
-            DisplayCurrentCourse();
+            DisplayCurrentInventory();
 
         }
 
@@ -222,32 +222,33 @@ namespace CollegeTeachingAssignmentMDI
             nextId = PositionRow["NextCourseId"] != DBNull.Value ?
             Convert.ToInt32(PositionRow["NextCourseId"]) : null;
             previousId = PositionRow["PreviousCourseId"] != DBNull.Value ?
-            Convert.ToInt32(PositionRow["PreviousCourseId"]) : null;
+            Convert.ToInt32(PositionRow["PreviousCourseId"]) : null; 
 
             this.DisplayParentStatusStripMessage($"displaying food {rowNumber} out of {foodCount}");
         }
 
         #region display data row
 
-        private void DisplayCurrentCourse()
+        private void DisplayCurrentInventory()
         {
-            DataRow currentCourseRow = GetInventoryDataRow(currentId);
-            DisplayCourse(currentCourseRow);
+            DataRow currentInventoryRow = GetInventoryDataRow(currentId);
+            DisplayInventory(currentInventoryRow);
         }
 
-        private void DisplayCourse(DataRow selectedCourse)
+        private void DisplayInventory(DataRow selectedCourse)
         {
             txtInventoryId.Text = selectedCourse["InventoryID"].ToString();
             txtFoodName.Text = selectedCourse["FoodName"].ToString();
             txtPrice.Text = selectedCourse["Price"].ToString(); 
             dtpPurchase.Value = Convert.ToDateTime(selectedCourse["PurchaseDate"]);
+            txtQty.Text = selectedCourse["Quantity"].ToString();
         }
 
 
         #endregion
 
         #endregion
-        private int GetFirstCourseId()
+        private int GetFirstInventory()
         {
             int id = Convert.ToInt32(DataAccess.GetValue("SELECT TOP (1) InventoryID FROM Inventory ORDER BY PurchaseDate"));
             return id;
@@ -295,14 +296,15 @@ namespace CollegeTeachingAssignmentMDI
 
         #region Send Data
 
-        private void UpdateCourse()
+        private void UpdateInventory()
         {
             string sqlUpdateCourse = $@"
                  UPDATE Inventory
                  SET FoodName = '{txtFoodName.Text.Trim()}'
-                 ,Price = {txtPrice.Text}
-                 ,PurchaseDate = {dtpPurchase.Value} 
-                 WHERE CourseId = {txtInventoryId.Text}";
+                 ,Price = '{txtPrice.Text}'
+                 ,PurchaseDate = '{dtpPurchase.Value}'
+                 ,Quantity = '{txtQty.Text.Trim()}'
+                 WHERE InventoryID = {txtInventoryId.Text}";
 
             Debug.WriteLine(sqlUpdateCourse);
 
@@ -314,7 +316,7 @@ namespace CollegeTeachingAssignmentMDI
             }
             else if(rowsAffected == 1)
             {
-                MessageBox.Show("course updated");
+                MessageBox.Show("Inventory updated");
             }
             else
             {
@@ -322,7 +324,7 @@ namespace CollegeTeachingAssignmentMDI
             }
         }
 
-        private void CreateCourse()
+        private void CreateInventory()
         {
             string formattedDate = dtpPurchase.Value.ToString("yyyy-MM-dd HH:mm:ss");
 
@@ -331,12 +333,14 @@ namespace CollegeTeachingAssignmentMDI
                      (
                         FoodName,
                         Price,
-                        PurchaseDate)
+                        PurchaseDate,
+                        Quantity)
                      VALUES
                      (
                         '{txtFoodName.Text.Trim()}'
                         ,'{txtPrice.Text}'
                         ,'{formattedDate}'
+                        ,'{txtQty.Text}'
                      )";
 
 
@@ -344,7 +348,7 @@ namespace CollegeTeachingAssignmentMDI
 
             if (rowsAffected == 1)
             {
-                MessageBox.Show("Course created.");
+                MessageBox.Show("Purchase created.");
             }
             else
             {
@@ -352,7 +356,7 @@ namespace CollegeTeachingAssignmentMDI
             }
         }
 
-        private void DeleteCourse()
+        private void DeleteInventory()
         {
             string sqlDelete = $"DELETE FROM Inventory WHERE InventoryID = {txtInventoryId.Text}";
 
@@ -360,7 +364,7 @@ namespace CollegeTeachingAssignmentMDI
 
             if (rowsAffected == 1)
             {
-                MessageBox.Show("Course was deleted");
+                MessageBox.Show("Inventory record was deleted");
             }
             else
             {

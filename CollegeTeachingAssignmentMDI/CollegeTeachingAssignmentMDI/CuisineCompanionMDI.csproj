@@ -6,9 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Product>College Teaching Assignments</Product>
+    <Product>CuisineCompanion</Product>
     <AssemblyVersion>0.9</AssemblyVersion>
-    <Company>NBCC</Company>
+    <Company>CuisineCompanion</Company>
+	  <IncludesourceRevisionInInformationalVersion>
+		  false
+	  </IncludesourceRevisionInInformationalVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -32,6 +35,7 @@
 
   <ItemGroup>
     <Folder Include="images\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
 
 </Project>

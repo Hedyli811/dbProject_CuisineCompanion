@@ -36,9 +36,9 @@
             // 
             // btnDisplay
             // 
-            btnDisplay.Location = new Point(429, 60);
+            btnDisplay.Location = new Point(307, 33);
             btnDisplay.Name = "btnDisplay";
-            btnDisplay.Size = new Size(298, 29);
+            btnDisplay.Size = new Size(130, 58);
             btnDisplay.TabIndex = 0;
             btnDisplay.Text = "Display related ingredients";
             btnDisplay.UseVisualStyleBackColor = true;
@@ -48,25 +48,25 @@
             // 
             cmbInventory.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbInventory.FormattingEnabled = true;
-            cmbInventory.Location = new Point(67, 60);
+            cmbInventory.Location = new Point(73, 49);
             cmbInventory.Name = "cmbInventory";
-            cmbInventory.Size = new Size(294, 28);
+            cmbInventory.Size = new Size(216, 28);
             cmbInventory.TabIndex = 1;
             // 
             // dgvInventory
             // 
             dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventory.Location = new Point(67, 128);
+            dgvInventory.Location = new Point(73, 120);
             dgvInventory.Name = "dgvInventory";
             dgvInventory.RowHeadersWidth = 51;
-            dgvInventory.Size = new Size(660, 277);
+            dgvInventory.Size = new Size(364, 297);
             dgvInventory.TabIndex = 2;
             // 
             // frmBrowseInventory
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(499, 467);
             Controls.Add(dgvInventory);
             Controls.Add(cmbInventory);
             Controls.Add(btnDisplay);

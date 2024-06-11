@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CuisineCompanionMDI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,9 @@ namespace CollegeTeachingAssignmentMDI
                     break;
                 case "BrowseInventory":
                     childForm = new frmBrowseInventory();
+                    break;
+                case "ingredient":
+                    childForm = new frmManytoMany();
                     break;
             }
 

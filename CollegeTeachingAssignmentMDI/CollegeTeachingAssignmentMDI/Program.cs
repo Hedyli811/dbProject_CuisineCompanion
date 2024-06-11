@@ -1,3 +1,5 @@
+using CuisineCompanionMDI;
+
 namespace CollegeTeachingAssignmentMDI
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace CollegeTeachingAssignmentMDI
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmBrowseInventory());
+            Application.Run(new frmMDIParent());
         }
     }
 }

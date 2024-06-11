@@ -17,7 +17,7 @@ namespace CollegeTeachingAssignmentMDI
         private int firstId;
         private int lastId;
         private int? nextId;
-        private int? previousId;
+        private int? previousId; 
         private int rowNumber;
 
         private FormState currentState;
@@ -42,7 +42,7 @@ namespace CollegeTeachingAssignmentMDI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete this Course?", "Are you sure",
+            if (MessageBox.Show("Are you sure you want to delete this dish?", "Are you sure",
             MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 DeleteDish();
@@ -355,7 +355,7 @@ namespace CollegeTeachingAssignmentMDI
 
             if (rowsAffected == 1)
             {
-                MessageBox.Show("Course created.");
+                MessageBox.Show("Dish created.");
             }
             else
             {
@@ -402,7 +402,7 @@ namespace CollegeTeachingAssignmentMDI
             }
             else if (rowsAffected == 1)
             {
-                MessageBox.Show("course updated");
+                MessageBox.Show("Dish updated");
             }
             else
             {

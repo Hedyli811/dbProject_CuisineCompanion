@@ -11,11 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("NBCC")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CuisineCompanion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.9")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7116bc1eb0ee8d5ce31d5ded9c6f9443087fc366")]
-[assembly: System.Reflection.AssemblyProductAttribute("College Teaching Assignments")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyProductAttribute("CuisineCompanion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CuisineCompanionMDI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.9")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]

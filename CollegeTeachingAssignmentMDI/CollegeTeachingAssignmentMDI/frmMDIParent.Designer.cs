@@ -39,6 +39,8 @@
             维护ToolStripMenuItem = new ToolStripMenuItem();
             instructorToolStripMenuItem = new ToolStripMenuItem();
             courseToolStripMenuItem = new ToolStripMenuItem();
+            browseDishToolStripMenuItem = new ToolStripMenuItem();
+            browseInventoryToolStripMenuItem = new ToolStripMenuItem();
             viewMenu = new ToolStripMenuItem();
             toolBarToolStripMenuItem = new ToolStripMenuItem();
             statusBarToolStripMenuItem = new ToolStripMenuItem();
@@ -65,8 +67,7 @@
             toolStripStatusLabel = new ToolStripStatusLabel();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolTip = new ToolTip(components);
-            browseDishToolStripMenuItem = new ToolStripMenuItem();
-            browseInventoryToolStripMenuItem = new ToolStripMenuItem();
+            ingredientForDishToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             toolStrip.SuspendLayout();
             statusStrip.SuspendLayout();
@@ -116,7 +117,7 @@
             // 
             // 维护ToolStripMenuItem
             // 
-            维护ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { instructorToolStripMenuItem, courseToolStripMenuItem, browseDishToolStripMenuItem, browseInventoryToolStripMenuItem });
+            维护ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { instructorToolStripMenuItem, courseToolStripMenuItem, browseDishToolStripMenuItem, browseInventoryToolStripMenuItem, ingredientForDishToolStripMenuItem });
             维护ToolStripMenuItem.Name = "维护ToolStripMenuItem";
             维护ToolStripMenuItem.Size = new Size(53, 24);
             维护ToolStripMenuItem.Text = "维护";
@@ -124,7 +125,7 @@
             // instructorToolStripMenuItem
             // 
             instructorToolStripMenuItem.Name = "instructorToolStripMenuItem";
-            instructorToolStripMenuItem.Size = new Size(224, 26);
+            instructorToolStripMenuItem.Size = new Size(227, 26);
             instructorToolStripMenuItem.Tag = "Dishes";
             instructorToolStripMenuItem.Text = "Dishes";
             instructorToolStripMenuItem.Click += ShowNewForm;
@@ -132,10 +133,26 @@
             // courseToolStripMenuItem
             // 
             courseToolStripMenuItem.Name = "courseToolStripMenuItem";
-            courseToolStripMenuItem.Size = new Size(224, 26);
+            courseToolStripMenuItem.Size = new Size(227, 26);
             courseToolStripMenuItem.Tag = "Inventory";
             courseToolStripMenuItem.Text = "Inventory";
             courseToolStripMenuItem.Click += ShowNewForm;
+            // 
+            // browseDishToolStripMenuItem
+            // 
+            browseDishToolStripMenuItem.Name = "browseDishToolStripMenuItem";
+            browseDishToolStripMenuItem.Size = new Size(227, 26);
+            browseDishToolStripMenuItem.Tag = "BrowseDish";
+            browseDishToolStripMenuItem.Text = "BrowseDish";
+            browseDishToolStripMenuItem.Click += ShowNewForm;
+            // 
+            // browseInventoryToolStripMenuItem
+            // 
+            browseInventoryToolStripMenuItem.Name = "browseInventoryToolStripMenuItem";
+            browseInventoryToolStripMenuItem.Size = new Size(227, 26);
+            browseInventoryToolStripMenuItem.Tag = "BrowseInventory";
+            browseInventoryToolStripMenuItem.Text = "BrowseInventory";
+            browseInventoryToolStripMenuItem.Click += ShowNewForm;
             // 
             // viewMenu
             // 
@@ -332,19 +349,13 @@
             toolStripStatusLabel1.Size = new Size(167, 20);
             toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // browseDishToolStripMenuItem
+            // ingredientForDishToolStripMenuItem
             // 
-            browseDishToolStripMenuItem.Name = "browseDishToolStripMenuItem";
-            browseDishToolStripMenuItem.Size = new Size(224, 26);
-            browseDishToolStripMenuItem.Tag = "BrowseDish";
-            browseDishToolStripMenuItem.Text = "BrowseDish";
-            // 
-            // browseInventoryToolStripMenuItem
-            // 
-            browseInventoryToolStripMenuItem.Name = "browseInventoryToolStripMenuItem";
-            browseInventoryToolStripMenuItem.Size = new Size(224, 26);
-            browseInventoryToolStripMenuItem.Tag = "BrowseInventory";
-            browseInventoryToolStripMenuItem.Text = "BrowseInventory";
+            ingredientForDishToolStripMenuItem.Name = "ingredientForDishToolStripMenuItem";
+            ingredientForDishToolStripMenuItem.Size = new Size(227, 26);
+            ingredientForDishToolStripMenuItem.Tag = "ingredient";
+            ingredientForDishToolStripMenuItem.Text = "Ingredient for dish";
+            ingredientForDishToolStripMenuItem.Click += ShowNewForm;
             // 
             // frmMDIParent
             // 
@@ -409,6 +420,7 @@
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripMenuItem browseDishToolStripMenuItem;
         private ToolStripMenuItem browseInventoryToolStripMenuItem;
+        private ToolStripMenuItem ingredientForDishToolStripMenuItem;
     }
 }
 
