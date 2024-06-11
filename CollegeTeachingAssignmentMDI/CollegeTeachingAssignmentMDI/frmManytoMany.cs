@@ -357,7 +357,7 @@ namespace CuisineCompanionMDI
             }
             else
             {
-                MessageBox.Show($"you don't have enough stock.left quantity of {cmbInventory.SelectedText} is {GetLeftQty(currentInventoryID, currentDishID, 0)} ");
+                MessageBox.Show($"you don't have enough stock.left quantity of {cmbInventory.GetItemText(cmbInventory.SelectedItem)} is {GetLeftQty(currentInventoryID, currentDishID, 0)} ");
 
             }
         }
@@ -403,7 +403,7 @@ namespace CuisineCompanionMDI
                 }
                 else if (rowsAffected == 1)
                 {
-                    MessageBox.Show($"updated, left quantity of {cmbInventory.SelectedText} is {leftQty}");
+                    MessageBox.Show("updated");
                 }
                 else
                 {
@@ -414,7 +414,7 @@ namespace CuisineCompanionMDI
             }
             else
             {
-                MessageBox.Show($"not enough ingredient. left quantity of {cmbInventory.SelectedText} is {GetLeftQty(currentInventoryID, currentDishID, 0)}");
+                MessageBox.Show($"not enough ingredient. left quantity of {cmbInventory.GetItemText(cmbInventory.SelectedItem)} is {GetLeftQty(currentInventoryID, currentDishID, 0)}");
 
             }
 

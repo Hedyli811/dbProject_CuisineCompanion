@@ -250,7 +250,7 @@ namespace CollegeTeachingAssignmentMDI
         #endregion
         private int GetFirstInventory()
         {
-            int id = Convert.ToInt32(DataAccess.GetValue("SELECT TOP (1) InventoryID FROM Inventory ORDER BY PurchaseDate"));
+            int id = Convert.ToInt32(DataAccess.GetValue("SELECT TOP (1) InventoryID FROM Inventory ORDER BY InventoryID"));
             return id;
         }
 
@@ -270,24 +270,24 @@ namespace CollegeTeachingAssignmentMDI
             (SELECT COUNT(1) FROM Inventory) AS FoodCount,
             InventoryID,
             (
-            SELECT TOP(1) InventoryID as FirstCourseId FROM Inventory ORDER BY PurchaseDate
+            SELECT TOP(1) InventoryID as FirstCourseId FROM Inventory ORDER BY InventoryID
             ) as FirstCourseId,
             q.PreviousCourseId,
             q.NextCourseId,
             (
-            SELECT TOP(1) InventoryID as LastCourseId FROM Inventory ORDER BY PurchaseDate Desc
+            SELECT TOP(1) InventoryID as LastCourseId FROM Inventory ORDER BY InventoryID Desc
             ) as LastCourseId,
             q.RowNumber
             FROM
             (
             SELECT InventoryID, FoodName,
-            LEAD(InventoryID) OVER(ORDER BY PurchaseDate) AS NextCourseId,
-            LAG(InventoryID) OVER(ORDER BY PurchaseDate) AS PreviousCourseId,
-            ROW_NUMBER() OVER(ORDER BY PurchaseDate) AS 'RowNumber'
+            LEAD(InventoryID) OVER(ORDER BY InventoryID) AS NextCourseId,
+            LAG(InventoryID) OVER(ORDER BY InventoryID) AS PreviousCourseId,
+            ROW_NUMBER() OVER(ORDER BY InventoryID) AS 'RowNumber'
             FROM Inventory
             ) AS q
             WHERE q.InventoryID = {id}
-            ORDER BY q.FoodName";
+            ORDER BY q.InventoryID";
             DataTable dt = DataAccess.GetData(sqlNav);
             return dt.Rows[0];
         }

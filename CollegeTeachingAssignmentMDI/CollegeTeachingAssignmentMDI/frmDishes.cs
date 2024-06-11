@@ -287,7 +287,7 @@ namespace CollegeTeachingAssignmentMDI
               q.PreviousCourseId,
               q.NextCourseId,
               (
-              SELECT TOP(1) DishID as LastCourseId FROM CookedDish ORDER BY DishName Desc
+              SELECT TOP(1) DishID as LastCourseId FROM CookedDish ORDER BY DishID Desc
               ) as LastCourseId,
               q.RowNumber
               FROM
