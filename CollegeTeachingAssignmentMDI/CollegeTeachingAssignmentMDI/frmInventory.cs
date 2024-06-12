@@ -1,5 +1,6 @@
 using System.Data;
 using System.Diagnostics;
+using System.Text;
 
 namespace CollegeTeachingAssignmentMDI
 {
@@ -360,11 +361,23 @@ namespace CollegeTeachingAssignmentMDI
         {
             string sqlDelete = $"DELETE FROM Inventory WHERE InventoryID = {txtInventoryId.Text}";
 
+            string sqlDeleteMsg = $"SELECT DishName FROM CookedDish  C INNER JOIN Inventory_CookedDish IC ON C.DishID = IC.DishID WHERE InventoryID = {txtInventoryId.Text}";
+
+            DataTable dt = DataAccess.GetData(sqlDeleteMsg);
+
+
+            StringBuilder sb = new StringBuilder();
+            foreach (DataRow row in dt.Rows)
+            {
+                sb.Append(row[0].ToString()); // Assuming the first column index is 0
+                sb.Append(", "); // Add a separator if needed
+            }
+              
             int rowsAffected = DataAccess.SendData(sqlDelete);
 
             if (rowsAffected == 1)
             {
-                MessageBox.Show("Inventory record was deleted");
+                MessageBox.Show($"Inventory record was deleted. you use this {txtFoodName.Text} cooked {sb}");
             }
             else
             {
